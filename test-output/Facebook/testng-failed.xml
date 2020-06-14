@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Facebook]">
+  <parameter name="browser" value="firefox"/>
+  <test name="on chrome">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="GRID.BaseTest"/>
+    </classes>
+  </test> <!-- on chrome -->
+  <test name="on firefox">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="GRID.BaseTest"/>
+    </classes>
+  </test> <!-- on firefox -->
+  <test name="on firefox(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="GRID.BaseTest">
+        <methods>
+          <include name="login" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- GRID.BaseTest -->
+    </classes>
+  </test> <!-- on firefox(failed) -->
+</suite> <!-- Failed suite [Facebook] -->
