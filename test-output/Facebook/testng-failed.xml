@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Facebook]">
-  <parameter name="browser" value="firefox"/>
-  <test name="on chrome">
-    <parameter name="browser" value="chrome"/>
+  <test name="login">
     <classes>
-      <class name="GRID.BaseTest"/>
+      <class name="Facebook_LoginTest.LoginTest"/>
     </classes>
-  </test> <!-- on chrome -->
-  <test name="on firefox">
-    <parameter name="browser" value="firefox"/>
+  </test> <!-- login -->
+  <test name="login(failed)">
     <classes>
-      <class name="GRID.BaseTest"/>
-    </classes>
-  </test> <!-- on firefox -->
-  <test name="on firefox(failed)">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="GRID.BaseTest">
+      <class name="Facebook_LoginTest.LoginTest">
         <methods>
-          <include name="login" invocation-numbers="0"/>
+          <include name="login"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- GRID.BaseTest -->
+      </class> <!-- Facebook_LoginTest.LoginTest -->
     </classes>
-  </test> <!-- on firefox(failed) -->
+  </test> <!-- login(failed) -->
 </suite> <!-- Failed suite [Facebook] -->

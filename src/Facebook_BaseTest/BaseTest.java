@@ -15,7 +15,7 @@ public class BaseTest {
 	@BeforeTest
 	public void setup()
 	{
-		System.setProperty("webdriver.chrome.driver", "C://Users//Dell//Desktop//Tutorial//Driver Files//chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C://Users//Dell//Desktop//POM//Driver Files//chromedriver.exe");
         driver=new ChromeDriver();
         driver.get(url);
         
